@@ -1,0 +1,21 @@
+response should be
+
+Henry Schein, "Melville, 1000
+Waters Corporation, "Milford, 1000
+Estée Lauder Companies (The), "New York City, 1001
+Ameren, "St. Louis, 1002
+PG&E Corporation, "Oakland, 1004
+Tyson Foods, "Springdale, 1004
+United Airlines Holdings, "Chicago, 1005
+Union Pacific Corporation, "Omaha, 1008
+FactSet, "Norwalk, 1013
+NRG Energy, "Houston, 1013
+Verisign, "Dulles, 1014
+Amazon, "Seattle, 1018
+RTX Corporation, "Waltham, 1018
+Iron Mountain, "Boston, 1020
+Quest Diagnostics, "Secaucus, 1022
+Steel Dynamics, "Fort Wayne, 1022
+Rockwell Automation, "Milwaukee, 1024
+
+and so on....
