@@ -1,0 +1,5 @@
+1. In the taxonomy table of the dataset Acacia plants count is 326.
+
+2. The wheat species with the longest DNA sequence is Triticum durum (durum wheat), with a sequence length of 836514780.
+
+3. the answer of problem 3 in q3.sql
