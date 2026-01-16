@@ -17,16 +17,25 @@ export function parseProducts(html: string): Product[] {
       const relativeUrl = anchor.attr("href");
 
       if (name && priceText && relativeUrl) {
-        const priceNumber = parseFloat(priceText.replace(/[^\d.-]/g, ""));
+        let cleanedPrice = priceText
+          .replace(/₹|Rs\.?|INR/gi, "")
+          .replace(/\s+/g, "") 
+          .trim();
         
-        if (!isNaN(priceNumber)) {
-          products.push({
-            name,
-            price: priceNumber,
-            url: relativeUrl.startsWith("http")
-              ? relativeUrl
-              : `https://mdcomputers.in/${relativeUrl}`
-          });
+        const priceMatch = cleanedPrice.match(/(\d+(?:,\d{2,3})*(?:\.\d{2})?)/);
+        
+        if (priceMatch && priceMatch[1]) {
+          const priceNumber = parseFloat(priceMatch[1].replace(/,/g, ""));
+          
+          if (!isNaN(priceNumber) && priceNumber > 0) {
+            products.push({
+              name,
+              price: priceNumber,
+              url: relativeUrl.startsWith("http")
+                ? relativeUrl
+                : `https://mdcomputers.in/${relativeUrl}`
+            });
+          }
         }
       }
     });
